@@ -33,7 +33,7 @@
 			<dependency>
 				<groupId>org.mybatis</groupId>
 				<artifactId>mybatis</artifactId>
-				<version>3.3.0</version>
+				<version>3.4.1</version>
 			</dependency>
 			
 			<!-- JAVA通过jdbc访问mySQL数据库时所需的jar包 -->

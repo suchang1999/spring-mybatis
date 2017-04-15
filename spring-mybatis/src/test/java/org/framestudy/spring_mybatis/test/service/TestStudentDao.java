@@ -2,8 +2,8 @@ package org.framestudy.spring_mybatis.test.service;
 
 import javax.annotation.Resource;
 
-import org.framestudy.spring_mybatis.relationmag.beans.Wife;
-import org.framestudy.spring_mybatis.relationmag.dao.IWifeDao;
+import org.framestudy.spring_mybatis.relationmag.beans.Students;
+import org.framestudy.spring_mybatis.relationmag.dao.IStudentDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -11,17 +11,17 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)	//使用JUnit测试的时候，启动Spring容器
 @ContextConfiguration(locations={"classpath*:applicationContext.xml"})
-public class TestWifeDao {
+public class TestStudentDao {
 	
 	@Resource
-	private IWifeDao wifeDaoImpl;
+	private IStudentDao studentDaoImpl;
 	
 	@Test
-	public void testGetWifeWithHusbandByWifeId(){
-		Wife wife = wifeDaoImpl.getWifeWithHusbandByWifeId(5);
-		System.out.println(wife.getId());
-		System.out.println(wife.getName());
-		
-//		System.out.println(wife.getHus().getName());	//延迟加载：不用则不会主动去加载数据库
+	public void testGetStudentWithClassByStudentId(){
+		Students student = studentDaoImpl.getStudentWithClassByStudentId(3);
+		System.out.println(student.getName());
+		System.out.println(student.getCla().getName());
 	}
+	
+	
 }

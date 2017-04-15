@@ -9,6 +9,12 @@
 	
 	<settings>
 		<setting name="logImpl" value="LOG4J"/>
+		
+		<!-- 延迟加载 -->
+		<!-- lazyLoadingEnabled 开启延迟加载 -->
+		<!-- aggressiveLazyLoading 将关联对象加载方式修改为消极加载 -->
+		<setting name="lazyLoadingEnabled" value="true"/>
+		<setting name="aggressiveLazyLoading" value="false"/>
 	</settings>
 
 	<!-- 给类取别名 -->

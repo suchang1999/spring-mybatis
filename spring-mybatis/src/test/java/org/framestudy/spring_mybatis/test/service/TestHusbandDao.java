@@ -20,8 +20,8 @@ public class TestHusbandDao {
 	
 	@Test
 	public void testMarry(){
-		Wife wife = new Wife(1, "杨江英", null);
-		HusBand hus = new HusBand(1, "童雨薇", wife);
+		Wife wife = new Wife(1, "lucy", null);
+		HusBand hus = new HusBand(1, "童da薇", wife);
 		husbandDaoImpl.marry(hus);
 		
 	}

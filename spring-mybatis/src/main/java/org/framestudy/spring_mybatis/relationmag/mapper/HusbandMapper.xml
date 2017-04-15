@@ -11,6 +11,7 @@
 		<result property="wife.name" column="wName" javaType="java.lang.String"/>
 	</resultMap>
 	
+	<!-- 预加载 -->
 	<insert id="marry">
 		insert into t_hus (hus_name) values (#{hus.name});
 		insert into t_wife (wife_name,fk_hus_id) values (#{hus.wife.name},(select id 

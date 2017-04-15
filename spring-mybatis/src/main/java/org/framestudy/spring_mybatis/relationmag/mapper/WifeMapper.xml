@@ -9,7 +9,8 @@
 		<result property="name" column="wife_name" javaType="java.lang.String"/>
 		
 		<!-- association 关联或关系 -->
-		<association property="hus" javaType="Husband" column="fk_hus_id" select="org.framestudy.spring_mybatis.relationmag.mapper.HusbandMapper.getHusbandByFkHusId"></association>
+		<!-- fetchType="lazy" 关联对象的加载策略：懒加载（延迟加载） -->
+		<association property="hus" javaType="Husband" column="fk_hus_id" fetchType="lazy" select="org.framestudy.spring_mybatis.relationmag.mapper.HusbandMapper.getHusbandByFkHusId"></association>
 	</resultMap>	
 	
 	<select id="getWifeWithHusbandByWifeId" resultMap="wifeMap">

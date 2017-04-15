@@ -42,7 +42,7 @@ public class Wife implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "Wife [id=" + id + ", name=" + name + ", hus=" + hus + "]";
+		return "Wife [id=" + id + ", name=" + name + "]";
 	}
 	
 }
